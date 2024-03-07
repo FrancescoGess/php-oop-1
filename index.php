@@ -12,15 +12,24 @@ class Movie{
     public $length;
     public $type;
     public $name;
+    public static $language = "Italian";
 
     
     // definisco una funzione "costruttore"
-    function __construct($_genre, $_length, $_type, $_name ){
+    function __construct($_genre, $_length, $_type, Name $_name ){
         $this->genre = $_genre;
         $this->length = $_length;
         $this->type = $_type;
         $this->name = $_name;
     }
+    
+}
+
+class Name{
+    // creo altre variabili per composizione
+    public $spiderman;
+    public $superman;
+    public $godzilla;
 }
 
 ?>
