@@ -30,6 +30,12 @@ class Name{
     public $spiderman;
     public $superman;
     public $godzilla;
+
+    public function __construct($spiderman, $superman, $godzilla){
+        $this->spiderman = $spiderman;
+        $this->superman = $superman;
+        $this->godzilla = $godzilla;    
+    }
 }
 
 ?>
