@@ -10,32 +10,54 @@ class Movie{
     // creo variabili d'istanza
     public $genre;
     public $length;
-    public $type;
     public $name;
     public static $language = "Italian";
 
     
-    // definisco una funzione "costruttore"
-    function __construct($_genre, $_length, $_type, Name $_name ){
+    // definisco una funzione "costruttore" per inizializzare le variabili
+    function __construct($_genre, $_length, $_name){
         $this->genre = $_genre;
         $this->length = $_length;
-        $this->type = $_type;
         $this->name = $_name;
     }
     
-}
-
-class Name{
-    // creo altre variabili per composizione
-    public $spiderman;
-    public $superman;
-    public $godzilla;
-
-    public function __construct($spiderman, $superman, $godzilla){
-        $this->spiderman = $spiderman;
-        $this->superman = $superman;
-        $this->godzilla = $godzilla;    
+    //funzione per stampare a schermo
+    public function getStampa(){
+        echo "Genre: {$this->genre}";
+        echo "Length: {$this->length}";
+        echo "Name: {$this->name}";
     }
 }
 
+$movies = [
+
+    $movie1 = new Movie(
+        'Action', 
+        120,
+        'spiderman',     
+        ),
+    $movie2 = new Movie(
+        'Police', 
+        120,
+        'Superman',
+        ),
+    ];
+
+    echo "<h1> Primo Film </h1>";
+    $movie1->getStampa();
+    echo "<h1> Secondo Film </h1>";
+    $movie2->getStampa();
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie oop</title>
+</head>
+<body>
+
+</body>
+</html>
